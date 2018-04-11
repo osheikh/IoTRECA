@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
-   
+
   <title>IOTRECA</title>
 </head>
 <style>
@@ -15,150 +15,158 @@
  * Globals
  */
 
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
+  /* Links */
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
+  a,
+  a:focus,
+  a:hover {
+    color: #fff;
+  }
+
+  /* Custom default button */
+
+  .btn-secondary,
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: .05rem solid #fff;
+  }
 
 
-/*
+  /*
  * Base structure
  */
 
-html,
-body {
-  height: 100%;
-  background-color: #333;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: lighten;
-}
+  html,
+  body {
+    height: 100%;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+  }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-}
+  body {
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  }
 
-.cover-container {
-  max-width: 42em;
-}
+  .cover-container {
+    max-width: 42em;
+  }
 
 
-/*
+  /*
  * Header
  */
-.masthead {
-  margin-bottom: 2rem;
-}
 
-.masthead-brand {
-  margin-bottom: 0;
-}
+  .masthead {
+    margin-bottom: 2rem;
+  }
 
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 48em) {
   .masthead-brand {
-    float: left;
+    margin-bottom: 0;
   }
-  .nav-masthead {
-    float: right;
+
+  .nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
   }
-}
+
+  .nav-masthead .nav-link:hover,
+  .nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+  }
+
+  .nav-masthead .nav-link+.nav-link {
+    margin-left: 1rem;
+  }
+
+  .nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  @media (min-width: 48em) {
+    .masthead-brand {
+      float: left;
+    }
+    .nav-masthead {
+      float: right;
+    }
+  }
 
 
-/*
+  /*
  * Cover
  */
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
-}
+
+  .cover {
+    padding: 0 1.5rem;
+  }
+
+  .cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+  }
 
 
-/*
+  /*
  * Footer
  */
-.mastfoot {
-  color: rgba(255, 255, 255, .5);
-}
+
+  .mastfoot {
+    color: rgba(255, 255, 255, .5);
+  }
 </style>
+
 <body>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-          <div class="inner">
-            <h3 class="masthead-brand">IoTRECA</h3>
-            <nav class="nav nav-masthead justify-content-center">
-              <a class="nav-link active" href="https://qaziayyama.wixsite.com/projectiotreca">Home</a>
-            </nav>
-          </div>
-        </header>
-  
-        <main role="main" class="inner cover">
-          
-          <div class="container" style="width:800px;height: 250px;overflow:auto;">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">UID</th>
-                    <!-- <th scope="col">DATE</th> -->
-                    <th scope="col">BPM</th>
-                    <th scope="col">TEMPERATURE</th>
-                  </tr>
-                </thead>
-                <tbody id='main'>
-          
-                </tbody>
-              </table>
-              <div class='card-block' id="data"></div>
-            </div>
-        </main>
-  
-        <footer class="mastfoot mt-auto">
-          <div class="inner">
-            <p><b>Intelligent services empowering community</b></p>
-          </div>
-        </footer>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">IoTRECA</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="https://qaziayyama.wixsite.com/projectiotreca">Home</a>
+        </nav>
       </div>
-  
+    </header>
+
+    <main role="main" class="inner cover">
+
+      <div class="container" style="width:800px;height: 450px;overflow:auto;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">UID</th>
+              <!-- <th scope="col">DATE</th> -->
+              <th scope="col">BPM</th>
+              <th scope="col">TEMPERATURE</th>
+            </tr>
+          </thead>
+          <tbody id='main'>
+
+          </tbody>
+        </table>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner" style="text-align:  center;">
+        <p>
+          <b>Intelligent services empowering community</b>
+        </p>
+      </div>
+    </footer>
+    </div>
+
 </body>
 
 </html>
@@ -182,23 +190,23 @@ body {
   userDataRef.once("value").then(function (snapshot) {
     snapshot.forEach(function (childSnapshot) {
       childSnapshot.forEach(function (d) {
-        var date=d.key;
-        var bpm = d.val().BPM || childSnapshot.val().BPM ;
+        var date = d.key;
+        var bpm = d.val().BPM || childSnapshot.val().BPM;
         var temp = d.val().temperature || childSnapshot.val().temperature;
         // $('#main').append("<tr><td>"+childSnapshot.key+"</td><td>"+date+"</td><td>"+bpm+"</td><td>"+temp+"</td></tr>")
-        $('#main').append("<tr><td>"+childSnapshot.key+"</td><td>"+bpm+"</td><td>"+temp+"</td></tr>")
+        $('#main').append("<tr><td>" + childSnapshot.key + "</td><td>" + bpm + "</td><td>" + temp + "</td></tr>")
       });
       // var key = childSnapshot.key;
       // var childData = childSnapshot.val();
 
       // var name_val = childSnapshot.val().BPM;
       // var id_val = childSnapshot.val().temperature;
-     
+
       // // $("#name").append(name_val);
       // // $("#id").append(id_val);
 
       // $("#data").append("<p>" + name_val + "</p><p> " + id_val + "</p><br>");
 
-  });
+    });
   });
 </script>
